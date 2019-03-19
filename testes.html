@@ -1,0 +1,192 @@
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Experiência Kpbs</title>
+	<style>
+		body{margin: 0em 1em 0em 1em; font-size: 1.1em;}
+		hr{margin-top: 2%; margin-bottom: 2%;}
+		table, th, td {border: 1px solid black;border-collapse: collapse;}
+		th, td {padding: 15px;}
+        #tabela_entrada{background-color: gray;}
+	</style>
+</head>
+<body>
+
+<h1>Experiência Kbps</h1>
+
+<pre>
+ _  ___
+| |/ / |
+| ' /| |__  _ __  ___
+|  < | '_ \| '_ \/ __|
+| . \| |_) | |_) \__ \
+|_|\_\_.__/| .__/|___/
+           | |        
+           |_|        
+
+<b>Autor:</b> Jefferson 'Slackjeff' Rocha
+<b>Inicio:</b> 18/Março/2019
+<b>Fim:</b>
+</pre>
+
+<a href="index.html">Voltar</a>
+
+
+<hr>
+
+<h2>Testes</h2>
+
+<p>
+Cronometrei alguns sites em geral de acordo com a experiência que fui tendo
+diariamente.<br>
+Dentre eles está o <b>Nome do site</b>, <b>Tempo de requisição que a página 
+levou para abrir</b> e <b>Tempo de requisição em cache</b>.<br>
+Para um beneficio real de primeiro momento eu zerei meu cache do navegador 
+<b>Google Chrome</b> para não ter nenhum beneficio de requisição em cache.
+Após isto passei a utilizar normalmente. Abaixo está a tabela cronometrada...
+</p>
+
+<table>
+<tr id="tabela_entrada">
+	<th>Site</th>
+	<th>Requisição</th>
+	<th>Cache</th>
+</tr>
+	<th>thobias.org</th>
+    <th>05.00 Segundos</th>
+	<th>00.45 Milesegundos</th>
+<tr>
+  	<th>stallman.org</th>
+  	<th>09.99 Segundos</th>
+	<th>02.29 Segundos</th>
+</tr>
+<tr>
+	<th>plaintextproject.online</th>
+  	<th>11.20 Segundos</th>
+  	<th>00.81 Milesegundos</th>
+</tr>
+<tr>
+  	<th>google.com.br</th>
+  	<th>17.60 Segundos</th>
+  	<th>11.35 Segundos</th>
+</tr>
+<tr>
+  	<th>slackjeff.com.br</th>
+  	<th> 35.10 Segundos</th>
+  	<th>03.06 Segundos</th>
+</tr>
+<tr>
+  	<th>mazonsos.com</th>        
+ 	<th>39.78 Segundos</th>
+  	<th>05.49 Segundos</th>
+</tr>
+<tr>
+	<th>github.com</th>
+	<th>49.09 Segundos</th>
+	<th>43.05 Segundos</th>
+</tr>
+<tr>
+  	<th>pornhub.com</th>
+  	<th>02.12 Minutos</th> 
+  	<th>50.27 Segundos</th>
+</tr>
+<tr>
+  	<th>youtube.com</th>
+  	<th>02.44 Minutos</th>
+  	<th>11.84 Segundos</th>
+</tr>
+</table>
+
+<p>
+  Com certeza os browsers atuais fizeram um avanço incrivel com o famoso
+  cache, que ajudam na requisição do mesmo assim ficando uma grande parte
+  do site estático armazenado em seu HD, assim a requisição diminui em até
+  80%, deixando o negócio veloz.<br>
+  Podemos ver na estatistica acima que o tempo diminui pra caraio.
+  Mas não podemos levar ao pé da letra, lembrando
+  que a internet por está limitada está bem desnorteada indo de 22kbps até 80
+  kbps, mas da pra ter uma base.
+</p>
+
+<p>
+  O que fode realmente nos sites de hoje em dia é o excesso de javascript e
+  imagens, e o css mutante. Sim o css pesa também pois é mais uma requisição.
+  Meu site slackjeff.com.br não teve um desempenho tão esperado assim, achei
+  que o carregamento seria mais rápido por ter um design clean, nada de 
+  javascript e nenhum carregamento de fonte ou algo do tipo externo.<br>
+  O que realmente pesou foi as imagens do "logo" e do rodapé que não estão no seu tamanho 
+  ideal, ou
+  seja elas são reduzidas pelo próprio css, e isso complica pois o browser vai
+  renderizar o tamanho total da imagem e depois ajustar.
+  Vamos ao tamanho das imagens disponivel na página principal do meu site:
+</p>
+
+<table>
+<tr id="tabela_entrada">
+	<th>Imagem</th>
+	<th>Tamanho</th>
+</tr>
+<tr>
+	<th>logo.png</th>
+  	<th>64K</th>
+</tr>
+<tr>
+  <th>fb.png</th>
+  <th>08K</th>
+</tr>
+<tr>
+  <th>tl.png</th>
+  <th>08K</th>
+</tr>
+<tr>
+  	<th>github.png</th>
+	<th>12K</th>
+</tr>
+<tr>
+  	<th>bug.png</th>
+	<th>08K</th>
+</tr>
+<tr>
+  	<th>email.png</th>
+	<th>12K</th>
+</tr>
+<tr>
+  	<th>doe.png</th>
+	<th>08K</th>
+</tr>
+<tr id="tabela_entrada">
+<th>Total: 120K</th>
+</tr>
+</table>
+
+<p>  
+Como podemos ver o total foi de 120 Kbytes o que para a nossa velocidade limitada é 
+muita coisa.<br>A solução é reduzir as imagens para seus tamanhos ideais assim 
+reduzindo drasticamente os Kbytes em até metade do seu tamanho original, o que 
+torna a página mais rápida.
+</p>
+
+<h2>Testes de Velocidades Diários</h2>
+
+<p>
+Todos os testes relatos foram feitos atráves do site <a 
+href="https://fast.com/pt/">https://fast.com/pt/</a>.<br>
+Para um melhor testes me planejei em testar em dois horários diferentes do dia, em 
+qualquer horário da manhã e qualquer horário de madrugada.
+</p>
+
+<table>
+<tr id="tabela_entrada">
+	<th>Dia</th>
+	<th>Horário</th>
+	<th>Velocidade</th>
+</tr>
+<tr>
+	<th>19/03/2019</th>
+	<th>00:25</th>
+	<th>71 Kbps</th>
+</tr>
+</table>
+
+</body>
+</html>
